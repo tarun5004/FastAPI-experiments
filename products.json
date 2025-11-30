@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Sony Bravia 55 inch TV",
+      "category": "electronics",
+      "price": 60000,
+      "in_stock": true
+    },
+    {
+      "id": 2,
+      "name": "Samsung 4K Smart TV",
+      "category": "electronics",
+      "price": 55000,
+      "in_stock": true
+    },
+    {
+      "id": 3,
+      "name": "Nike Air Max Shoes",
+      "category": "fashion",
+      "price": 8000,
+      "in_stock": false
+    },
+    {
+      "id": 4,
+      "name": "Sony WH-1000XM4 Headphones",
+      "category": "electronics",
+      "price": 25000,
+      "in_stock": true
+    },
+    {
+      "id": 5,
+      "name": "iPhone 15 Pro",
+      "category": "mobile",
+      "price": 130000,
+      "in_stock": true
+    }
+  ]
+}
