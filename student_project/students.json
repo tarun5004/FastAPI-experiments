@@ -1,0 +1,59 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Rahul Kumar",
+      "age": 20,
+      "grade": "A",
+      "subjects": [
+        "Math",
+        "Physics",
+        "Computer Science"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Priya Sharma",
+      "age": 21,
+      "grade": "A+",
+      "subjects": [
+        "English",
+        "History",
+        "Economics"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Amit Patel",
+      "age": 19,
+      "grade": "B",
+      "subjects": [
+        "Chemistry",
+        "Biology",
+        "Math"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Neha Singh",
+      "age": 22,
+      "grade": "A",
+      "subjects": [
+        "Computer Science",
+        "Math",
+        "Statistics"
+      ]
+    },
+    {
+      "name": "tarun raj",
+      "age": 18,
+      "grade": "A",
+      "subjects": [
+        "english",
+        "hidi",
+        "boo"
+      ],
+      "id": 5
+    }
+  ]
+}
