@@ -1,148 +1,69 @@
-# FastAPI Learning Project
+# FastAPI-experiments
 
-## 📚 Description
-This is my first FastAPI project created while learning FastAPI fundamentals. The project demonstrates basic concepts like routing, path parameters, query parameters, and working with JSON data.
+A collection of FastAPI experiments, examples, and **25 in-depth Hinglish guides** covering backend topics from basics to production (FastAPI, SQLAlchemy, Alembic, Celery, WebSockets, Redis, Docker, CI/CD, monitoring, frontend integration, and more).
 
-## 🚀 Features
-- ✅ Basic GET endpoints
-- ✅ Path parameters (dynamic URLs)
-- ✅ Query parameters (search & filters)
-- ✅ JSON data handling
-- ✅ Product search functionality
-- ✅ Category-based filtering
+---
 
-## 📁 Project Structure
-```
-fast api/
-├── main.py              # Main FastAPI application
-├── products.json        # Sample product data
-├── requirements.txt     # Python dependencies
-└── README.md           # Project documentation
-```
+## Quick links
+- Docs: `docs/` (25 comprehensive guides — read in Hinglish with diagrams and code)
+- Main app: `main.py`
 
-## 🛠️ Installation
+## What you can find here
+- Learning examples for FastAPI and common backend problems
+- Opinionated guides (Hinglish) that explain "kyun" (why) and "kaise" (how) with analogies and diagrams
+- Ready-to-run snippets and Docker examples
 
-### 1. Create Virtual Environment
-```bash
-python -m venv .venv
+---
+
+## Quick start (Windows - PowerShell)
+
+1. Create and activate virtual environment
+
+```powershell
+python -m venv .venv; .\.venv\Scripts\Activate.ps1
 ```
 
-### 2. Activate Virtual Environment
-```bash
-# Windows PowerShell
-.\.venv\Scripts\Activate.ps1
-```
+2. Install dependencies (if present)
 
-### 3. Install Dependencies
-```bash
+```powershell
 pip install -r requirements.txt
 ```
 
-## ▶️ Running the Application
+3. Run the FastAPI app
 
-### Method 1: Direct Python
-```bash
-python -m uvicorn main:app --reload
+```powershell
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-### Method 2: Using Virtual Environment
-```bash
-& "C:/vscode tool/fast api/.venv/Scripts/python.exe" -m uvicorn main:app --reload
-```
+4. Visit interactive docs:
 
-The server will start at: `http://127.0.0.1:8000`
+- Swagger UI: `http://127.0.0.1:8000/docs`
+- ReDoc: `http://127.0.0.1:8000/redoc`
 
-## 📌 API Endpoints
+---
 
-### 1. Home
-- **URL:** `/`
-- **Method:** GET
-- **Description:** Welcome message
+## Documentation highlights (examples)
+- `22_frontend_basics.md` — HTML, CSS, JS, Fetch API
+- `23_frontend_frameworks.md` — React, Vue, API integration
+- `24_system_design_dsa.md` — System design and DSA notes for interviews
+- `25_performance_scaling.md` — Profiling, caching, scaling patterns
 
-### 2. Greet User
-- **URL:** `/greet/{name}`
-- **Method:** GET
-- **Example:** `/greet/Rahul`
-- **Description:** Greets user with dynamic name
+See the full list inside `docs/`.
 
-### 3. Search Products
-- **URL:** `/search?query={keyword}`
-- **Method:** GET
-- **Example:** `/search?query=sony`
-- **Description:** Search products by name
+---
 
-### 4. Get All Products
-- **URL:** `/products`
-- **Method:** GET
-- **Description:** Returns all products from JSON file
+## Contributing
+1. Fork → Create a branch → Commit → Open PR
+2. Add tests where applicable
+3. Keep docs clear and add examples
 
-### 5. Filter Products
-- **URL:** `/filter?category={category}&max_price={price}`
-- **Method:** GET
-- **Example:** `/filter?category=electronics&max_price=30000`
-- **Description:** Filter products by category and price
+If you want I can add GitHub Actions to run linting and deploy docs to GitHub Pages.
 
-## 🧪 Testing the API
+---
 
-### Browser
-Simply open these URLs in your browser:
-- `http://127.0.0.1:8000/`
-- `http://127.0.0.1:8000/docs` (Interactive API documentation)
-- `http://127.0.0.1:8000/search?query=iphone`
+## License
+MIT
 
-### Interactive Documentation
-FastAPI provides automatic interactive API documentation:
-- **Swagger UI:** `http://127.0.0.1:8000/docs`
-- **ReDoc:** `http://127.0.0.1:8000/redoc`
+---
 
-## 📖 Concepts Learned
-
-### 1. Path Parameters
-Dynamic URL segments enclosed in curly braces `{}`
-```python
-@app.get("/greet/{name}")
-def greet_user(name: str):
-    return {"message": f"Hello {name}!"}
-```
-
-### 2. Query Parameters
-Optional parameters passed after `?` in URL
-```python
-@app.get("/search")
-def search_items(query: str):
-    return {"search_query": query}
-```
-
-### 3. JSON File Handling
-Reading data from external JSON files
-```python
-def load_products():
-    with open('products.json') as f:
-        data = json.load(f)
-    return data['products']
-```
-
-## 🔧 Technologies Used
-- **FastAPI** - Modern web framework for building APIs
-- **Uvicorn** - ASGI server for running FastAPI
-- **Python 3.13** - Programming language
-- **JSON** - Data storage format
-
-## 📝 Notes
-- This is a learning project for understanding FastAPI basics
-- Currently uses JSON file as mock database
-- Server runs with auto-reload enabled for development
-
-## 🎯 Future Improvements
-- [ ] Add POST, PUT, DELETE methods
-- [ ] Integrate real database (SQLite/PostgreSQL)
-- [ ] Add Pydantic models for validation
-- [ ] Implement authentication
-- [ ] Add error handling
-- [ ] Create frontend interface
-
-## 👨‍💻 Author
-MCA Student learning FastAPI
-
-## 📅 Date Created
-November 30, 2025
+If you want, I can now commit these changes and push them to GitHub (and add a basic GitHub Actions workflow). Would you like me to push now?
